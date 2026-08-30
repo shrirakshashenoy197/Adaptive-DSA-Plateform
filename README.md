@@ -1,8 +1,8 @@
-## Adaptive DSA Platform
+# Adaptive DSA Platform
 
 An interactive and personalized Data Structures & Algorithms (DSA) practice platform designed to help students improve their problem-solving skills through progress tracking, performance analysis, topic-wise insights, and adaptive practice recommendations.
 
-## 🚀 Overview
+# 🚀 Overview
 
 Learning DSA can be difficult because students often don't know which topics they should practice next or how well they are actually performing.
 
@@ -21,7 +21,7 @@ The goal is to provide a simple, beginner-friendly environment for structured an
 
 ---
 
-## ✨ Features
+# ✨ Features
 
 📊 Progress Tracking
 
@@ -43,7 +43,7 @@ For example:
 
 This allows users to prioritize weak or untouched topics instead of practicing randomly.
 
-## 📚 Topic-Based Practice
+# 📚 Topic-Based Practice
 
 Problems are organized into different DSA topics such as:
 
@@ -56,7 +56,7 @@ Problems are organized into different DSA topics such as:
 
 Additional topics can be added as the platform grows.
 
-## 🎯 Difficulty-Based Practice
+# 🎯 Difficulty-Based Practice
 
 Problems can be categorized according to difficulty levels such as:
 
@@ -66,7 +66,7 @@ Problems can be categorized according to difficulty levels such as:
 
 This allows users to gradually progress from fundamentals to more challenging problems.
 
-## 📝 Problem Details
+# 📝 Problem Details
 
 Each problem can provide:
 
@@ -80,11 +80,11 @@ Each problem can provide:
 
 This helps students understand not only the solution but also the reasoning behind it.
 
-## 💾 Local Progress Storage
+# 💾 Local Progress Storage
 
 The platform uses browser storage to maintain practice progress so that users can continue their learning without losing their previously recorded statistics.
 
-## 🎨 Interactive User Interface
+# 🎨 Interactive User Interface
 
 The platform provides a clean and interactive interface with:
 
@@ -98,7 +98,7 @@ The platform provides a clean and interactive interface with:
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 # Frontend
 
@@ -133,29 +133,29 @@ adaptive-dsa-platform/
 
 ---
 
-## ⚙️ How It Works
+# ⚙️ How It Works
 
-# 1. Select a Topic
+## 1. Select a Topic
 
 The user chooses a DSA topic they want to practice.
 
-# 2. Choose a Problem
+## 2. Choose a Problem
 
 The platform displays problems based on the selected topic and difficulty.
 
-# 3. Practice
+## 3. Practice
 
 The user attempts the problem and can view useful information such as hints and approaches.
 
-# 4. Track Progress
+## 4. Track Progress
 
 The platform records attempts and solved problems.
 
-# 5. Analyze Performance
+## 5. Analyze Performance
 
 The user's accuracy and topic-wise progress are calculated automatically.
 
-# 6. Get Recommendations
+## 6. Get Recommendations
 
 The platform analyzes the available progress data and recommends the next topic or area that needs more practice.
 
