@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DSA Progress Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>DSA Progress Tracker</h1>
+
+       <nav>
+    <a href="#" data-section="home">Home</a>
+    <a href="#" data-section="problems">Problems</a>
+    <a href="#" data-section="progress">Progress</a>
+</nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero"id="home">
+            <h2>Improve Your DSA Skills</h2>
+
+            <p>
+                Practice problems, track your performance,
+                and identify the topics you need to improve.
+            </p>
+
+            <button id="startButton">Start Practicing</button>
+        </section>
+
+
+        <section id="progress">
+
+            <h2>Your Progress</h2>
+
+            <div class="stats">
+
+                <div class="stat-card solved-stat">
+                    <h3 id="solvedCount">0</h3>
+                    <p>Problems Solved</p>
+                </div>
+
+                <div class="stat-card attempt-stat">
+                    <h3 id="attemptCount">0</h3>
+                    <p>Total Attempts</p>
+                </div>
+                 
+                <div class="stat-card failed-stat">
+                    <h3 id="failedCount">0</h3>
+                    <p>Failed Attempts</p>
+                </div>
+
+
+                <div class="stat-card accuracy-stat">
+                    <h3 id="accuracy">0%</h3>
+                    <p>Accuracy</p>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="topicPerformance">
+
+    <h2>Topic Performance</h2>
+
+    <div class="topic-stats">
+
+        <div class="topic-card">
+            <h3>Arrays</h3>
+            <p>Problems Solved: <span>0</span></p>
+            <small class="topic-percentage">0%</small>
+        </div>
+
+        <div class="topic-card">
+            <h3>Strings</h3>
+            <p>Problems Solved: <span>0</span></p>
+            <small class="topic-percentage">0%</small>
+        </div>
+
+        <div class="topic-card">
+            <h3>Stack</h3>
+            <p>Problems Solved: <span>0</span></p>
+            <small class="topic-percentage">0%</small>
+        </div>
+
+        <div class="topic-card">
+            <h3>Trees</h3>
+            <p>Problems Solved: <span>0</span></p>
+            <small class="topic-percentage">0%</small>
+        </div>
+
+        <div class="topic-card linked-list-card">
+
+    <h3>Linked List</h3>
+
+    <p>
+        Problems Solved:
+        <span>0</span>
+    </p>
+
+    <p class="topic-percentage">
+        0%
+    </p>
+
+</div>
+
+
+<div class="topic-card queue-card">
+
+    <h3>Queue</h3>
+
+    <p>
+        Problems Solved:
+        <span>0</span>
+    </p>
+
+    <p class="topic-percentage">
+        0%
+    </p>
+
+</div>
+
+    </div>
+
+   <div id="recommendation">
+
+    <h3>Recommended Practice</h3>
+
+    <ul class="recommendation-list">
+
+        <li>
+            <strong>Focus:</strong>
+            <span id="recommendationText">
+                Solve some problems to get a recommendation.
+            </span>
+        </li>
+
+        <li>
+            <strong>Difficulty:</strong>
+            <span id="difficultyRecommendation">
+            </span>
+        </li>
+
+        <li>
+            <strong>Recommended Problem:</strong>
+            <span id="specificRecommendation">
+            </span>
+        </li>
+
+    </ul>
+
+
+    <div id="learningAnalysis">
+
+        <h3>Learning Analysis</h3>
+
+        <ul class="analysis-list">
+
+            <li>
+                <span id="learningAnalysisText">
+                    Your learning analysis will appear here.
+                </span>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+</section>
+
+
+        <section id="problems">
+
+            <h2>Practice Problems</h2>
+
+            <div class="filters">
+
+                <input 
+                   type="text"
+                   id="problemSearch"
+                   placeholder=" search problems..."
+                >   
+
+                <select id="topicFilter">
+                    <option value="all">All Topics</option>
+                    <option value="arrays">Arrays</option>
+                    <option value="strings">Strings</option>
+                    <option value="linked list">Linked List</option>
+                    <option value="stack">Stack</option>
+                    <option value="queue">Queue</option>
+                    <option value="trees">Trees</option>
+                    <option value="graphs">Graphs</option>
+                </select>
+
+
+                <select id="difficultyFilter">
+                    <option value="all">All Difficulties</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="all">All Problems</option>
+                    <option value="solved">Solved</option>
+                    <option value="unsolved">Unsolved</option>
+                </select>
+
+                <button id="resetFilters">
+                    Reset Filters
+                </button>
+
+            </div>
+
+
+            <div id="problemList">
+
+                <div class="problem-card" data-problem="two-sum">
+
+                    <h3>Two Sum</h3>
+
+                    <p>Topic: Arrays</p>
+
+                    <p>Difficulty: Easy</p>
+
+                    <button class="viewProblemButton"data-problem="two-sum">
+                        View Problem
+                    </button>
+
+                    <button class="solveButton">
+                        Mark as Solved
+                    </button>
+
+                </div>
+
+
+                <div class="problem-card" data-problem="reverse-string">
+
+                    <h3>Reverse a String</h3>
+
+                    <p>Topic: Strings</p>
+
+                    <p>Difficulty: Easy</p>
+
+                    <button class="viewProblemButton" data-problem="reverse-string">
+                        View Problem
+                    </button>
+
+                    <button class="solveButton">
+                        Mark as Solved
+                    </button>
+
+                </div>
+
+
+                <div class="problem-card" data-problem="binary-search">
+
+                    <h3>Binary Search</h3>
+
+                    <p>Topic:Arrays</p>
+
+                    <p>Difficulty: Medium</p>
+
+                    <button class="viewProblemButton" data-problem="binary-search">
+                        View Problem
+                    </button>
+
+                    <button class="solveButton">
+                        Mark as Solved
+                    </button>
+                    </div>
+
+                <div class="problem-card" data-problem="find-maximum">
+
+    <h3>Find Maximum Element</h3>
+
+    <p>Topic: Arrays</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="find-maximum">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="valid-parantheses">
+    <h3>Valid Parentheses</h3>
+
+    <p>Topic: Stack</p>
+
+    <p>Difficulty: Medium</p>
+
+    <button class="viewProblemButton" data-problem="valid-parantheses">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="binary-tree">
+
+    <h3>Binary Tree Traversal</h3>
+
+    <p>Topic: Trees</p>
+
+    <p>Difficulty: Medium</p>
+
+    <button class="viewProblemButton"data-problem="binary-tree">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+<!-- ============================================================
+     NEW ARRAY PROBLEMS
+     ============================================================ -->
+
+<div class="problem-card" data-problem="move-zeroes">
+
+    <h3>Move Zeroes</h3>
+
+    <p>Topic: Arrays</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="move-zeroes">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+<!-- ============================================================
+     LINKED LIST PROBLEMS
+     ============================================================ -->
+
+<div class="problem-card" data-problem="reverse-linked-list">
+
+    <h3>Reverse Linked List</h3>
+
+    <p>Topic: Linked List</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="reverse-linked-list">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="merge-sorted-lists">
+
+    <h3>Merge Two Sorted Lists</h3>
+
+    <p>Topic: Linked List</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="merge-sorted-lists">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="linked-list-cycle">
+
+    <h3>Linked List Cycle</h3>
+
+    <p>Topic: Linked List</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="linked-list-cycle">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<!-- ============================================================
+     QUEUE PROBLEMS
+     ============================================================ -->
+
+<div class="problem-card" data-problem="queue-using-stacks">
+
+    <h3>Implement Queue Using Stacks</h3>
+
+    <p>Topic: Queue</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="queue-using-stacks">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="recent-calls">
+
+    <h3>Number of Recent Calls</h3>
+
+    <p>Topic: Queue</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="recent-calls">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="circular-queue">
+
+    <h3>Design Circular Queue</h3>
+
+    <p>Topic: Queue</p>
+
+    <p>Difficulty: Medium</p>
+
+    <button class="viewProblemButton" data-problem="circular-queue">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="maximum-subarray">
+
+    <h3>Maximum Subarray</h3>
+
+    <p>Topic: Arrays</p>
+
+    <p>Difficulty: Medium</p>
+
+    <button class="viewProblemButton" data-problem="maximum-subarray">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<!-- ============================================================
+     NEW STRING PROBLEMS
+     ============================================================ -->
+
+<div class="problem-card" data-problem="valid-anagram">
+
+    <h3>Valid Anagram</h3>
+
+    <p>Topic: Strings</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="valid-anagram">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="longest-common-prefix">
+
+    <h3>Longest Common Prefix</h3>
+
+    <p>Topic: Strings</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="longest-common-prefix">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<!-- ============================================================
+     NEW STACK PROBLEMS
+     ============================================================ -->
+
+<div class="problem-card" data-problem="next-greater-element">
+
+    <h3>Next Greater Element</h3>
+
+    <p>Topic: Stack</p>
+
+    <p>Difficulty: Medium</p>
+
+    <button class="viewProblemButton" data-problem="next-greater-element">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="min-stack">
+
+    <h3>Min Stack</h3>
+
+    <p>Topic: Stack</p>
+
+    <p>Difficulty: Medium</p>
+
+    <button class="viewProblemButton" data-problem="min-stack">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<!-- ============================================================
+     NEW TREE PROBLEMS
+     ============================================================ -->
+
+<div class="problem-card" data-problem="maximum-depth-tree">
+
+    <h3>Maximum Depth of Binary Tree</h3>
+
+    <p>Topic: Trees</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="maximum-depth-tree">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+
+<div class="problem-card" data-problem="invert-binary-tree">
+
+    <h3>Invert Binary Tree</h3>
+
+    <p>Topic: Trees</p>
+
+    <p>Difficulty: Easy</p>
+
+    <button class="viewProblemButton" data-problem="invert-binary-tree">
+        View Problem
+    </button>
+
+    <button class="solveButton">
+        Mark as Solved
+    </button>
+
+</div>
+
+    <div id="problemDetails" class="problem-details">
+
+    <h2 id="detailTitle"></h2>
+
+    <h3>Problem Statement</h3>
+    <p id="detailStatement"></p>
+
+    <h3>Example</h3>
+    <p id="detailExample"></p>
+
+    <h3>Constraints</h3>
+    <ul id="detailConstraints"></ul>
+
+    <h3>Hint</h3>
+    <p id="detailHint"></p>
+<h3>Test Case</h3>
+
+<div id="testCase" class="test-case">
+    <p id="testInput"></p>
+    
+</div>
+    <h3>Try Your Solution</h3>
+
+<div class="code-editor-container">
+
+    <div class="code-editor-header">
+        <span>C++</span>
+        <span>Code Editor</span>
+    </div>
+
+    <textarea
+        id="codeEditor"
+        placeholder="// Write your C++ solution here..."
+        spellcheck="false"
+    ></textarea>
+
+    <div class="code-editor-footer">
+
+        <button id="runCodeButton">
+            Run Code
+        </button>
+
+    </div>
+
+</div>
+
+<div class="code-result-container">
+
+    <h3>Result</h3>
+
+    <p id="codeResult"></p>
+
+</div>
+
+<div id="aiCoach">
+
+    <h3>AI DSA Coach</h3>
+
+    <p>
+        Need help? Get a hint without revealing the complete solution.
+    </p>
+
+    <button id="aiHintButton">
+        Get AI Hint
+    </button>
+
+    <p id="aiHintText"></p>
+
+</div>
+
+    <button id="showApproachButton">
+        Show Approach
+    </button>
+
+    <div id="approach" class="approach">
+
+        <h3>Approach</h3>
+        <p id="detailApproach"></p>
+
+        <p>
+            <strong>Time Complexity:</strong>
+            <span id="detailTime"></span>
+        </p>
+
+        <p>
+            <strong>Space Complexity:</strong>
+            <span id="detailSpace"></span>
+        </p>
+
+    </div>
+
+</div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Adaptive DSA Platform © 2026
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
