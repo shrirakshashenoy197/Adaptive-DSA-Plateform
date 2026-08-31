@@ -110,12 +110,6 @@ The platform provides a clean and interactive interface with:
 
 - Browser LocalStorage
 
-# Backend
-
-A Node.js backend structure is included for future expansion and integration of server-side functionality.
-
----
-
 # 🏗️ Project Structure
 
 adaptive-dsa-platform/
@@ -124,10 +118,6 @@ adaptive-dsa-platform/
 │   ├── index.html
 │   ├── style.css
 │   └── script.js
-│
-├── backend/
-│   ├── package.json
-│   └── server.js
 │
 └── README.md
 
