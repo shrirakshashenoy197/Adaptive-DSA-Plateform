@@ -111,7 +111,7 @@ The platform provides a clean and interactive interface with:
 - Browser LocalStorage
 
 # 🏗️ Project Structure
-'''text
+```text
 adaptive-dsa-platform/
 │
 ├── frontend/
@@ -120,7 +120,7 @@ adaptive-dsa-platform/
 │   └── script.js
 │
 └── README.md
-'''
+```
 
 ---
 
@@ -154,13 +154,13 @@ The platform analyzes the available progress data and recommends the next topic 
 
 # 📈 Example:
 Suppose a user has the following progress:
-
+```text
 Topic  | Problems Solved
 Arrays | 3
 Strings| 1
 Stack  | 1
 Trees  | 0
-
+```
 The platform can identify that Trees has not been practiced yet and recommend it as the next focus area.
 
 This creates a more structured learning path instead of random problem solving.
